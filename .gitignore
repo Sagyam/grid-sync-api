@@ -1,6 +1,9 @@
 # mongo data directory
 /mongo-data
 
+# Env
+.env
+
 # compiled output
 /dist
 /node_modules
