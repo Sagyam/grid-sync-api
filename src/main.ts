@@ -5,4 +5,4 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   await app.listen(8000);
 }
-bootstrap();
+bootstrap().then(r => console.log('Server is running on port 8000'));
