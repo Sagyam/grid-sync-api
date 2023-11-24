@@ -1,0 +1,41 @@
+name: Run tests before merge
+
+# Triggers the workflow on pull request events to the main branch
+on:
+  pull_request:
+    branches:
+      - main
+
+# A job to run the tests
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install pnpm globally
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run tests
+        run: pnpm test
+
+      - name: Fail if tests fail
+        if: ${{ steps.run-tests.outcome == 'failure' }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.actions.createStatus({
+              context: 'Run tests before merge',
+              state: 'failure',
+              description: 'Tests failed. Please fix the issues and try again.'
+            })
