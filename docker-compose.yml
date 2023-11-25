@@ -9,7 +9,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - MONGO_URI=mongodb://sagyam:1234@mongo:27017/grid-sync-db
+      - DATABASE_URL=mongodb://sagyam:1234@mongo:27017/grid-sync-db
     depends_on:
       - mongo
   mongo:

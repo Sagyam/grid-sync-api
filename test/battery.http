@@ -1,0 +1,42 @@
+###POST request to create a new battery
+POST http://localhost:8000/battery
+Content-Type: application/json
+
+{
+  "name": "Test Battery",
+  "postCode": "12345",
+  "wattCapacity": 100
+}
+
+###POST multiple batteries
+POST http://localhost:8000/battery/multiple
+Content-Type: application/json
+
+[
+  {
+    "name": "Test Battery 1",
+    "postCode": "12345",
+    "wattCapacity": 100
+  },
+  {
+    "name": "Test Battery 2",
+    "postCode": "12345",
+    "wattCapacity": 100
+  }
+]
+
+###GET request to retrieve all batteries with default parameters
+GET http://localhost:8000/battery
+
+###GET request to retrieve batteries with pagination, sorting
+GET http://localhost:8000/battery?page=1&pageSize=10&sortBy=name&sortOrder=asc
+
+###GET request to retrieve batteries with filtering
+###Filter must be in the format of `field:operator:value`
+GET http://localhost:8000/battery?filter=returnDate:gt:2024-08-04T00:00:00.000Z&sortBy=name&sortOrder=asc
+
+###GET request to retrieve a specific battery by ID
+GET http://localhost:8000/battery/65618cf6bc0dff335c4c5ecb
+
+###DELETE request to delete a battery by ID
+DELETE http://localhost:8000/battery/6561070b883471551444e0d9
