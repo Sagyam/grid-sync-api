@@ -42,6 +42,7 @@ export class BatteryService {
       total,
       page,
       pageSize,
+      totalPages: Math.ceil(total / pageSize),
     };
   }
 
