@@ -42,7 +42,7 @@ export class BatteryService {
       total,
       page,
       pageSize,
-      totalPages: Math.ceil(total / pageSize),
+      totalPages: Math.ceil(batteries.length / pageSize),
     };
   }
 
@@ -81,6 +81,7 @@ export class BatteryService {
         filterData.AND.push({
           [field]: {
             [operator]: value,
+            mode: 'insensitive',
           },
         });
         break;
