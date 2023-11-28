@@ -19,11 +19,12 @@ Grid Sync API is a NestJS application that provides a REST API for the Grid Sync
 - Pagination, filtering and sorting on every on all properties
 - Dockerized application
 - Automated deployment upon merge to master
-- Automated developer docs generation
+- Automated docs generation
 - Swagger UI for API documentation
 - Automated testing upon merge to master
 - Automated code formatting linting on push
 - Automated docker image building and publishing
+- Convenient commit messages using commitizen.
 
 ## Tech Stack
 
@@ -34,4 +35,33 @@ Grid Sync API is a NestJS application that provides a REST API for the Grid Sync
 - Prisma
 - GitHub Actions
 - GitHub Pages
+
+## Installation
+
+```bash
+$ pnpm install
+```
+
+## Development
+
+```bash
+$ pnpm run start:dev
+```
+
+## Deployment
+
+```bash
+$ pnpm run start:prod
+```
+
+## Test
+
+```bash
+# unit tests
+$ pnpm run test
+# e2e tests
+$ pnpm run test:e2e
+# test coverage
+$ pnpm run test:cov
+```
 
