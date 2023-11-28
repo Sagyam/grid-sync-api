@@ -36,7 +36,7 @@ GET http://localhost:8000/battery?page=1&pageSize=3&sortBy=name&sortOrder=asc
 GET http://localhost:8000/battery?filter=returnDate:gt:2024-08-04T00:00:00.000Z&sortBy=name&sortOrder=asc
 
 ###GET request to retrieve a specific battery by ID
-GET http://localhost:8000/battery/65618cf6bc0dff335c4c5ecb
+GET http://localhost:8000/battery/65641f9690b706c3c0463764
 
 ###DELETE request to delete a battery by ID
 DELETE http://localhost:8000/battery/6561070b883471551444e0d9
