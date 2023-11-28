@@ -36,13 +36,14 @@ export class BatteryService {
     });
 
     const total = await this.prisma.battery.count({ where });
+    const totalPages = Math.ceil(total / pageSize);
 
     return {
       batteries,
       total,
       page,
       pageSize,
-      totalPages: Math.ceil(batteries.length / pageSize),
+      totalPages: totalPages,
     };
   }
 
