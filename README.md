@@ -1,36 +1,37 @@
 ## Description
 
-Grid Sync API is a NestJS application that provides a REST API for the Grid Sync application. It is a simple application that provides CRUD operations for a single entity, the `Grid`. The `Grid` entity is a simple object that contains a `name` and a `data` property. The `data` property is a stringified JSON object that contains the grid data. The `Grid` entity is stored in a MongoDB database.
+Grid Sync API is a NestJS application that provides a REST API for the Grid Sync application.
 
-## Installation
+## Demo URLs
 
-```bash
-$ pnpm install
-```
+- [Frontend](https://grid-sync.vercel.app/)
 
-## Running the app
+- [Developer Documentation](https://sagyam.github.io/grid-sync-api/)
 
-```bash
-# development
-$ pnpm run start
+- [Swagger Docs](https://beige-dog-toga.cyclic.app/swagger-docs/)
 
-# watch mode
-$ pnpm run start:dev
+- [API Endpoint](https://beige-dog-toga.cyclic.app/)
 
-# production mode
-$ pnpm run start:prod
-```
+## Features
 
-## Test
+- CRUD Endpoint for batteries
+- Database seeder scripts
+- Pagination, filtering and sorting on every on all properties
+- Dockerized application
+- Automated deployment upon merge to master
+- Automated developer docs generation
+- Swagger UI for API documentation
+- Automated testing upon merge to master
+- Automated code formatting linting on push
+- Automated docker image building and publishing
 
-```bash
-# unit tests
-$ pnpm run test
+## Tech Stack
 
-# e2e tests
-$ pnpm run test:e2e
-
-# test coverage
-$ pnpm run test:cov
-```
+- NestJS
+- TypeScript
+- MongoDB
+- Docker
+- Prisma
+- GitHub Actions
+- GitHub Pages
 
