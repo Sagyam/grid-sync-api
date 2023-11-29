@@ -1,3 +1,4 @@
+import { CacheInterceptor } from '@nestjs/cache-manager';
 import {
   Body,
   Controller,
@@ -7,6 +8,7 @@ import {
   Patch,
   Post,
   Query,
+  UseInterceptors,
 } from '@nestjs/common';
 import {
   BatteryFindAllDTO,
@@ -18,6 +20,7 @@ import { CreateBatteryDto } from './dto/create-battery.dto';
 import { UpdateBatteryDto } from './dto/update-battery.dto';
 
 @Controller('battery')
+@UseInterceptors(CacheInterceptor)
 export class BatteryController {
   constructor(private readonly batteryService: BatteryService) {}
 

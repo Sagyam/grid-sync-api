@@ -1,5 +1,4 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { Prisma } from '@prisma/client/extension';
 import { PrismaService } from '../prisma/prisma.service';
 import { BatteryQueryDTO } from './dto/battery-query-dto';
 import { CreateBatteryDto } from './dto/create-battery.dto';

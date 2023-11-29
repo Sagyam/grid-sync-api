@@ -29,7 +29,7 @@ Content-Type: application/json
 GET http://localhost:8000/battery
 
 ###GET request to retrieve batteries with pagination, sorting
-GET http://localhost:8000/battery?page=1&pageSize=3&sortBy=name&sortOrder=asc
+GET http://localhost:8000/battery?page=1&pageSize=3&sortBy=name&sortOrder=desc
 
 ###GET request to retrieve batteries with filtering
 ###Filter must be in the format of `field:operator:value`
