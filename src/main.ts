@@ -32,4 +32,4 @@ async function bootstrap() {
   await app.listen(8000);
 }
 
-bootstrap().then((r) => console.log('Server is running on port 8000'));
+bootstrap().then(() => console.log('Server is running on port 8000'));
